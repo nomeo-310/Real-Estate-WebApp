@@ -21,7 +21,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-node_modules/browser-resolve/node_modules/resolve/test/resolver/cup.coffee
-node_modules
-node_modules
-node_modules
