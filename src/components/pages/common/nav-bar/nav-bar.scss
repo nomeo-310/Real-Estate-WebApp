@@ -182,18 +182,20 @@
                 transform: translateX(-700px);
                 -webkit-transform: translateX(-700px);
                 transition: all 0.5s ease-in-out;
+                padding: 10px;
                 .nav-bar-center {
                     width: 60%;
                     justify-content: flex-start;
                     align-items: stretch;
                     .nav-list {
                         flex-direction: column;
-                        gap: 5px;
+                        gap: 10px;
                         padding: 10px 0px;
                         li {
                             .nav-link {
                                 text-transform: capitalize;
                                 font-size: 14px;
+                                padding: 0;
                             }
                         }
                     }
@@ -201,8 +203,9 @@
                 .nav-bar-right {
                     width: 40%;
                     padding: 0 20px;
-                    .register-login {
-                        height: 50px;
+                    .activities-logout-list {
+                        left: 0 !important;
+                        bottom: -60px;
                         span {
                             font-size: 20px;
                         }
@@ -216,6 +219,7 @@
         .nav-bar-wrapper {
             height: 220px;
             .nav-bar-left {
+                height: 50px;
                 .hamburger-menu-wrapper {
                     .hamburger-menu {
                         background: url('../../../images/navImages/xmark_dark.svg');
@@ -228,6 +232,9 @@
                 height: 170px;
                 transform: translateX(0px);
                 -webkit-transform: translateX(0px);
+                .nav-bar-right {
+                    padding: 10px 0;
+                }
             }
         }
     }
