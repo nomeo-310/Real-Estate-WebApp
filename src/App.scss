@@ -22,7 +22,81 @@
     box-sizing: border-box;
     list-style: none;
 }
-h2 {
-    font-size: 40px;
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+.padding {
+    padding: 80px 0;
+}
+.padding-lg {
+    padding: 100px 0;
+}
+.normal-text {
+    font-weight: 300;
+}
+.normal-xlg {
+    font-size: 35px;
+}
+.normal-lg {
+    font-size: 25px;
+}
+.normal-md {
+    font-size: 18px;
+}
+.normal-sm {
+    font-size: 15px;
+}
+.normal-tiny {
+    font-size: 14px;
+}
+.head-text {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.head-xlg {
+    font-size: 50px;
+    
+}
+.head-lg {
+    font-size: 48px;
+}
+.head-md {
+    font-size: 35px;
+}
+.head-sm {
+    font-size: 25px;
+}
+
+@media (max-width: 600px) {
+    .container-xtrm {
+        width: 96%;
+        margin: 0 auto;
+    }
+    .normal-xlg {
+        font-size: 30px;
+    }
+    .normal-lg {
+        font-size: 20px;
+    }
+    .normal-md {
+        font-size: 15px;
+    }
+    .normal-sm {
+        font-size: 13px;
+    }
+    .head-xlg {
+        font-size: 40px;
+        
+    }
+    .head-lg {
+        font-size: 30px;
+    }
+    .head-md {
+        font-size: 20px;
+    }
+    .head-sm {
+        font-size: 17px;
+    }
 }
 
