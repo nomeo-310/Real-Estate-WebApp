@@ -13,7 +13,7 @@ export const subText = [
 export const allLocation = ['Abraham Adesanya', 'Agunji', 'Amuwo-Odofin', 'Arepo', 'Awoyaya', 'Chevron', 'Eleganza', 'Elegushi', 'Ikate',
 'Ikeja', 'Ikota', 'Ikoyi', 'Lekki', 'Lekki Phase 1', 'Ologolo', 'Oniru', 'Owode', 'Sangotedo', 'Asokoro', 'Jabi', 'Gwarinpa', 'Logokoma', 'Jahi', 'Life Camp', 'Maitama', 'Wuse', 'Apo', 'Abuja Phase 3',
 'Lugbe', 'Dawaki', 'Kubwa', 'Mabushi', 'Dakwo District', 'Katampe', 'Gaduwa', 'Galadimawa', 'New Bodija', 'Old Bodija', 'Agodi G.R.A', 'Oluyole Estate', 'Iyaganku G.R.A', 'Onikere G.R.A', 'Ikolaba G.R.A', 'Jericho', 'Idi Ishin', 'Ring Road',
-'Akobo Estate', 'Aerodrome Estate', 'Alalubosa G.R.A', 'Kolapo Ishola Estate', 'Ajibode Estate' ];
+'Akobo Estate', 'Aerodrome Estate', 'Alalubosa G.R.A', 'Kolapo Ishola Estate', 'Ajibode Estate', "Ori-Okuta" ];
 
 export const featureCardData = [
     {
