@@ -11,4 +11,8 @@ export const navItems = [
         name: 'invest in apartments',
         path: '/invest-in-apartments'
     },
+    {
+        name: 'buy landed properties',
+        path: '/buy-landed-properties'
+    },
 ];

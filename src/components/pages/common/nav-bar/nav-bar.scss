@@ -62,12 +62,12 @@
                             text-decoration: none;
                             display: block;
                             padding: 8px 15px;
-                            text-transform: capitalize;
+                            text-transform: uppercase;
                             color: inherit;
                             font-size: 14px;
                         }
                         .nav-link.active {
-                            color: red;
+                            color: #378da9;
                             font-weight: 600;
                         }
                     }
@@ -78,9 +78,10 @@
                 display: flex;
                 align-items: center;
                 height: 40px;
-                border: 1px solid red;
+                border: 1px solid #378da9;
+                background: #378da9;
+                color: #fff;
                 padding: 0 20px;
-                border-radius: 5px;
                 .activities-logout {
                     width: 100%;
                     display: flex;
@@ -109,12 +110,10 @@
                         text-transform: capitalize;
                         border: 1px solid #ccc;
                         padding: 2px;
-                        border-radius: 4px;
                         background: #fff;
                         display: none;
                         li {
                             padding: 3px 5px;
-                            border-radius: 4px;
                             font-size: 14px;
                             &:hover {
                                 background: #ccc;
@@ -203,6 +202,9 @@
                 .nav-bar-right {
                     width: 40%;
                     padding: 0 20px;
+                    .activities-logout {
+                        padding: 0 10px;
+                    }
                     .activities-logout-list {
                         left: 0 !important;
                         bottom: -60px;
@@ -215,9 +217,9 @@
         }
     }
     .nav-bar.active {
-        height: 220px;
+        height: 260px;
         .nav-bar-wrapper {
-            height: 220px;
+            height: 250px;
             .nav-bar-left {
                 height: 50px;
                 .hamburger-menu-wrapper {
@@ -229,7 +231,7 @@
                 }
             }
             .nav-bar-menu {
-                height: 170px;
+                height: 210px;
                 transform: translateX(0px);
                 -webkit-transform: translateX(0px);
                 .nav-bar-right {

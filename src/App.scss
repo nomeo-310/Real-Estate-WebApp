@@ -21,19 +21,69 @@
     margin: 0;
     box-sizing: border-box;
     list-style: none;
+    text-decoration: none;
+}
+.text-left {
+    text-align: left;
+}
+.text-center {
+    text-align: center;
 }
 .container {
     width: 85%;
     margin: 0 auto;
 }
-.padding {
+.margin-y {
+    margin: 80px 0;
+}
+.margin-y-md {
+    margin: 60px 0;
+}
+.margin-y-sm {
+    margin: 40px 0;
+}
+.margin-y-lg {
+    margin: 100px 0;
+}
+.margin-x {
+    margin: 0 80px;
+}
+.margin-x-md {
+    margin: 0 80px;
+}
+.margin-x-sm {
+    margin: 0 40px;
+}
+.margin-x-lg {
+    margin: 0 100px;
+}
+.margin-b-30 {
+    margin-bottom: 30px;
+}
+.margin-b-40 {
+    margin-bottom: 40px;
+}
+.margin-b-20 {
+    margin-bottom: 20px;
+}
+.margin-b-10 {
+    margin-bottom: 10px;
+}
+.padding-y {
     padding: 80px 0;
 }
-.padding-lg {
+.padding-y-md {
+    padding: 60px 0;
+}
+.padding-y-lg {
     padding: 100px 0;
+}
+.normal-w {
+    font-weight: 300;
 }
 .normal-text {
     font-weight: 300;
+    font-family: 'Urbanist-Regular';
 }
 .normal-xlg {
     font-size: 35px;
@@ -45,14 +95,18 @@
     font-size: 18px;
 }
 .normal-sm {
-    font-size: 15px;
+    font-size: 16px;
 }
 .normal-tiny {
     font-size: 14px;
 }
+.header-w {
+    font-weight: 600;
+}
 .head-text {
-    font-weight: 500;
-    margin-bottom: 20px;
+    font-weight: 600;
+    font-family: 'Montserrat-Regular';
+    margin-bottom: 15px;
 }
 .head-xlg {
     font-size: 50px;
@@ -67,8 +121,41 @@
 .head-sm {
     font-size: 25px;
 }
+.button-default {
+    padding: 12px 25px;
+    font-size: 16px;
+    background: #378da9;
+    color: #fff;
+}
+.button-small {
+    padding: 8px 18px;
+    font-size: 16px;
+    background: #378da9;
+    color: #fff;
+}
 
 @media (max-width: 600px) {
+    .padding-y {
+        padding: 60px 0;
+    }
+    .padding-y-md {
+        padding: 40px 0;
+    }
+    .padding-y-lg {
+        padding: 80px 0;
+    }
+    .margin-y {
+        margin: 60px 0;
+    }
+    .margin-y-md {
+        margin: 40px 0;
+    }
+    .margin-y-sm {
+        margin: 20px 0;
+    }
+    .margin-y-lg {
+        margin: 80px 0;
+    }
     .container-xtrm {
         width: 96%;
         margin: 0 auto;
@@ -80,10 +167,10 @@
         font-size: 20px;
     }
     .normal-md {
-        font-size: 15px;
+        font-size: 16px;
     }
     .normal-sm {
-        font-size: 13px;
+        font-size: 15px;
     }
     .head-xlg {
         font-size: 40px;
@@ -93,10 +180,18 @@
         font-size: 30px;
     }
     .head-md {
-        font-size: 20px;
+        font-size: 25px;
     }
     .head-sm {
         font-size: 17px;
+    }
+    .button-default {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    .button-small {
+        padding: 6px 15px;
+        font-size: 15px;
     }
 }
 
