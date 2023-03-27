@@ -13,7 +13,7 @@ export const subText = [
 export const allLocation = ['Abraham Adesanya', 'Agunji', 'Amuwo-Odofin', 'Arepo', 'Awoyaya', 'Chevron', 'Eleganza', 'Elegushi', 'Ikate',
 'Ikeja', 'Ikota', 'Ikoyi', 'Lekki', 'Lekki Phase 1', 'Ologolo', 'Oniru', 'Owode', 'Sangotedo', 'Asokoro', 'Jabi', 'Gwarinpa', 'Logokoma', 'Jahi', 'Life Camp', 'Maitama', 'Wuse', 'Apo', 'Abuja Phase 3',
 'Lugbe', 'Dawaki', 'Kubwa', 'Mabushi', 'Dakwo District', 'Katampe', 'Gaduwa', 'Galadimawa', 'New Bodija', 'Old Bodija', 'Agodi G.R.A', 'Oluyole Estate', 'Iyaganku G.R.A', 'Onikere G.R.A', 'Ikolaba G.R.A', 'Jericho', 'Idi Ishin', 'Ring Road',
-'Akobo Estate', 'Aerodrome Estate', 'Alalubosa G.R.A', 'Kolapo Ishola Estate', 'Ajibode Estate', "Ori-Okuta" ];
+'Akobo Estate', 'Aerodrome Estate', 'Alalubosa G.R.A', 'Kolapo Ishola Estate', 'Ajibode Estate', 'Ori-Okuta'];
 
 export const featureCardData = [
     {
@@ -41,23 +41,50 @@ export const featureCardData = [
         title: 'Invest In Apartments'
     },
 ];
+
 export const investData = {
     title: 'Invest in an Apartment',
     link: 'invest-in-apartments',
     subtitle: 'Start with what you have. Get annualized appreciation in 5 years. \nLorem ipsum dolor sit amet consectetur adipisicing elit. Illum, nulla? Facere in veritatis, reiciendis consequuntur eius adipisci eum amet, sit placeat voluptate vitae dignissimos iusto inventore illo! Magni, repellat quas'
 };
+
 export const buyData = {
     title: 'Buy an Apartment',
     link: 'buy-an-apartment',
     subtitle: 'Get a 6 years payback period and enjoy 10 years guaranteed rent. \nLorem ipsum dolor sit amet consectetur adipisicing elit. Illum, nulla? Facere in veritatis, reiciendis consequuntur eius adipisci eum amet, sit placeat voluptate vitae dignissimos iusto inventore illo! Magni, repellat quas'
 };
+
 export const rentData = {
     title: 'Rent an Apartment',
     link: 'rent-an-apartment',
     subtitle: 'Get a 6 years payback period and enjoy 10 years guaranteed rent. \nLorem ipsum dolor sit amet consectetur adipisicing elit. Illum, nulla? Facere in veritatis, reiciendis consequuntur eius adipisci eum amet, sit placeat voluptate vitae dignissimos iusto inventore illo! Magni, repellat quas'
 };
+
 export const landData = {
     title: 'Buy landed Properties',
     link: 'buy-landed-properties',
     subtitle: 'Start with what you have. Get annualized appreciation in 5 years. \nLorem ipsum dolor sit amet consectetur adipisicing elit. Illum, nulla? Facere in veritatis, reiciendis consequuntur eius adipisci eum amet, sit placeat voluptate vitae dignissimos iusto inventore illo! Magni, repellat quas'
 };
+
+export const funFactData = [
+    {
+        id: 1,
+        title: '15M+',
+        subtitle: 'Average amount saved on market value of properties'
+    },
+    {
+        id: 2,
+        title: '98+',
+        subtitle: 'Properties funded'
+    },
+    {
+        id: 3,
+        title: '3.2Bn+',
+        subtitle: 'Property value funded'
+    },
+    {
+        id: 4,
+        title: '20,000+',
+        subtitle: 'Investment shares'
+    },
+]

@@ -3,6 +3,7 @@ import './home.scss'
 import HomeHeader from './HomeHeader'
 import HomeFeature from './HomeFeature'
 import FeatureProperties from './FeatureProperties'
+import FactCard from './FactCard'
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <HomeHeader/>
       <HomeFeature/>
       <FeatureProperties/>
+      <FactCard/>
     </div>
   )
 }

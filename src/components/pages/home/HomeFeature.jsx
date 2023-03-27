@@ -19,7 +19,7 @@ const HomeFeature = () => {
             </div>
             <div className="home-feature-cards">
                 {featureCardData.map((featureCard) => (
-                    <HomeFeatureCard featureCardData={featureCard}/>
+                    <HomeFeatureCard featureCardData={featureCard} key={featureCard.id}/>
                 ))}
             </div>
         </div>

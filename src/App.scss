@@ -69,11 +69,26 @@
 .margin-b-10 {
     margin-bottom: 10px;
 }
+.margin-t-30 {
+    margin-top: 30px;
+}
+.margin-t-40 {
+    margin-top: 40px;
+}
+.margin-t-20 {
+    margin-top: 20px;
+}
+.margin-t-10 {
+    margin-top: 10px;
+}
 .padding-y {
     padding: 80px 0;
 }
 .padding-y-md {
     padding: 60px 0;
+}
+.margin-y-sm {
+    margin: 20px 0;
 }
 .padding-y-lg {
     padding: 100px 0;
@@ -121,6 +136,9 @@
 .head-sm {
     font-size: 25px;
 }
+.head-xsm {
+    font-size: 20px;
+}
 .button-default {
     padding: 12px 25px;
     font-size: 16px;
@@ -132,6 +150,21 @@
     font-size: 16px;
     background: #378da9;
     color: #fff;
+}
+.button-tiny {
+    padding: 5px 12px;
+    font-size: 15px;
+    background: #378da9;
+    color: #fff;
+}
+.button-tiniest {
+    padding: 4px 10px;
+    font-size: 14px;
+    background: #378da9;
+    color: #fff;
+}
+.button-round {
+    border-radius: 30px;
 }
 
 @media (max-width: 600px) {
@@ -151,7 +184,7 @@
         margin: 40px 0;
     }
     .margin-y-sm {
-        margin: 20px 0;
+        margin: 15px 0;
     }
     .margin-y-lg {
         margin: 80px 0;
@@ -185,6 +218,9 @@
     .head-sm {
         font-size: 17px;
     }
+    .head-xsm {
+        font-size: 16px;
+    }
     .button-default {
         padding: 10px 20px;
         font-size: 15px;
@@ -192,6 +228,10 @@
     .button-small {
         padding: 6px 15px;
         font-size: 15px;
+    }
+    .button-tiny {
+        padding: 4px 10px;
+        font-size: 14px;
     }
 }
 

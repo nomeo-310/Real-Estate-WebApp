@@ -1,0 +1,44 @@
+.rent {
+   .rent-introduction {
+    .merits {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        .merit {
+            flex: 1;
+            height: 140px;
+            border: 1px solid red;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            h2 {
+                margin-bottom: 0;
+            }
+        }
+    }
+   }
+}
+@media (max-width: 600px) {
+    .rent {
+        .rent-introduction {
+         .merits {
+             display: flex;
+             flex-wrap: wrap;
+             gap: 15px;
+             .merit {
+                flex: none;
+                 width: calc(50% - 7.5px);
+                 height: 160px;
+                 border: 1px solid red;
+                 padding: 10px;
+                 border-radius: 5px;
+                 display: flex;
+                 flex-direction: column;
+                 justify-content: space-between;
+             }
+         }
+        }
+     } 
+}

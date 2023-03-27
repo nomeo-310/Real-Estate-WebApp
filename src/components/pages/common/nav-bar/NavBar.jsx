@@ -68,7 +68,8 @@ const NavBar = () => {
       <div className="nav-bar-wrapper">
         <div className="nav-bar-left">
           <div className="brand-name">
-            <Link to='/' onClick={closeMenu}>Nomeo Realtors</Link>
+            <Link to='/' onClick={closeMenu} reloadDocument>Nomeo Realtors</Link>
+            <span className="dot"></span>
           </div>
           <div className="hamburger-menu-wrapper"onClick={handleMenu}>
             <div className="hamburger-menu"></div>

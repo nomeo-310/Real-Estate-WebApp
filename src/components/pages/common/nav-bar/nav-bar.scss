@@ -14,25 +14,38 @@
         display: flex;
         padding: 15px 25px;
         .nav-bar-left {
-            width: 18%;
+            width: 21%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             height: 40px;
             .brand-name {
+                display: flex;
+                align-items: baseline;
+                gap: 4px;
                 a {
                     text-decoration: none;
                     font-family: 'Montserrat-Bold';
                     color: inherit;
                     text-transform: uppercase;
-                    font-size: 20px;
+                    font-size: 25px;
+                }
+                .dot {
+                    display: block;
+                    height: 8px;
+                    width: 8px;
+                    border-radius: 100%;
+                    background: red;
                 }
             }
             .hamburger-menu-wrapper {
                 display: none;
+                background: red;
+                padding: 7px;
+                border-radius: 100%;
                 .hamburger-menu {
-                    width: 20px;
-                    height: 20px;
+                    width: 15px;
+                    height: 15px;
                     background: url('../../../images/navImages/bars-staggered_dark.svg');
                     background-size: cover;
                     background-position: 50% 50%;
@@ -46,7 +59,7 @@
             }
         }
         .nav-bar-menu {
-            width: 82%;
+            width: 79%;
             display: flex;
             .nav-bar-center {
                 flex: 13;
@@ -56,19 +69,20 @@
                 height: 40px;
                 .nav-list {
                     display: flex;
-                    gap: 25px;
+                    gap: 10px;
                     li {
                         .nav-link {
                             text-decoration: none;
                             display: block;
-                            padding: 8px 15px;
-                            text-transform: uppercase;
+                            padding: 8px;
+                            text-transform: capitalize;
                             color: inherit;
-                            font-size: 14px;
+                            font-size: 15px;
                         }
                         .nav-link.active {
-                            color: #378da9;
-                            font-weight: 600;
+                            background: #378da9;
+                            padding: 5px 15px;
+                            color: #fff;
                         }
                     }
                 }
@@ -108,15 +122,16 @@
                         bottom: -60px;
                         flex-direction: column;
                         text-transform: capitalize;
-                        border: 1px solid #ccc;
+                        border: 1px solid #378da9;
                         padding: 2px;
                         background: #fff;
                         display: none;
                         li {
                             padding: 3px 5px;
                             font-size: 14px;
+                            color: #212121;
                             &:hover {
-                                background: #ccc;
+                                background: #378da9;
                                 color: #fff;
                             }
                         }

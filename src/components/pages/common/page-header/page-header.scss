@@ -1,0 +1,45 @@
+.page-header {
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    background-position: 50% 60%;
+    padding: 0 100px;
+    position: relative;
+    .page-header-content {
+        position: relative;
+        height: 100%;
+        width: 50%;
+        z-index: 100;
+        padding-top: 14%;
+        .page-header-text {
+            color: #fff;
+        }
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50vh;
+        background: rgba(0,0,0, 0.3);
+    }
+}
+@media (max-width: 600px) {
+    .page-header {
+        height: 40vh;
+        padding: 0 60px;
+        .page-header-content {
+            width: 80%;
+            padding-top: 36%;
+            .page-header-text {
+                h2 {
+                    margin-bottom: 3px;
+                    font-size: 22px;
+                }
+            }
+        }
+        .overlay {
+            height: 40vh;
+        }
+    } 
+}
