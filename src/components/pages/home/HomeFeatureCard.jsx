@@ -7,7 +7,7 @@ const HomeFeatureCard = ({featureCardData: {id, title, image, link}}) => {
         <div className="home-feature-card-image">
             <img src={image} alt={`card_${id}`}/>
         </div>
-        <h2 className="head-sm header-w text-center">{title}</h2>
+        <h2 className="head-text head-sm text-center">{title}</h2>
         <div className="mask"></div>
         <div className="home-feature-card-text">
             <p className="normal-text text-center">
@@ -17,7 +17,7 @@ const HomeFeatureCard = ({featureCardData: {id, title, image, link}}) => {
                 Nulla quam quia, adipisci mollitia dolore nihil nobis!
             </p>
             <div className="margin-y-sm">
-                <Link className='button-small normal-text' to={`${link}`}>Learn More</Link>
+                <Link className='button-small normal-text button-tiny-curved' to={`${link}`}>Learn More</Link>
             </div>
         </div>
     </div>

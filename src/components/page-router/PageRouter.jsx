@@ -5,21 +5,37 @@ import Home from '../pages/home/Home';
 import SingleBuy from '../pages/single-pages/SingleBuy';
 import SingleInvest from '../pages/single-pages/SingleInvest';
 import SingleRent from '../pages/single-pages/SingleRent';
-import SingleLand from '../pages/single-pages/SingleLand';
+import RentApartment from '../pages/single-pages/RentApartment';
 import Faq from '../pages/faq/Faq';
 import Rent from '../pages/rent/Rent';
+import Buy from '../pages/buy/Buy';
+import Invest from '../pages/invest/Invest';
+import ErrorPage from '../pages/error-page/ErrorPage';
+import BuyProperty from '../pages/buy/BuyProperty';
+import Subscription from '../pages/subscription/Subscription';
 
 const PageRouter = () => {
   return (
     <div>
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/rent-an-apartment/property/:id' element={<SingleRent/>}/>
-        <Route path='/buy-an-apartment/property/:id' element={<SingleBuy/>}/>
-        <Route path='/invest-in-apartments/property/:id' element={<SingleInvest/>}/>
-        <Route path='/buy-landed-properties/property/:id' element={<SingleLand/>}/>
+        <Route path='/' element={<Home/>} />
+        <Route path='/rent-an-apartment'>
+          <Route index element={<Rent/>}/>
+          <Route path=':id' element={<RentApartment/>}/>
+          <Route path='property/:id' element={<SingleRent/>}/>
+        </Route>
+        <Route path='/buy-properties'>
+          <Route index element={<BuyProperty/>}/>
+          <Route path=':id' element={<Buy/>}/>
+          <Route path='property/:id' element={<SingleBuy/>}/>
+        </Route>
+        <Route path='/invest-in-apartments'>
+          <Route index element={<Invest/>}/>
+          <Route path='property/:id' element={<SingleInvest/>}/>
+        </Route>
         <Route path='/frequently-asked-questions' element={<Faq/>}/>
-        <Route path='/rent-an-apartment' element={<Rent/>}/>
+        <Route path='*' element={<ErrorPage/>}/>
+        <Route path='/subscription-form' element={<Subscription/>}/>
       </Routes>
     </div>
   );

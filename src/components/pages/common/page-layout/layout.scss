@@ -1,0 +1,210 @@
+.rent-apartment {
+    .rent-apartment-content {
+     display: flex;
+     gap: 15px;
+     height: 100vh;
+     overflow: hidden;
+     .left-section {
+         width: 23%;
+         height: 100vh;
+         padding-top: 20px;
+         .left-section-content {
+             width: 100%;
+             height: 100%;
+             border-radius: 4px;
+             padding: 0 10px ;
+             .section-drop-down-container {
+                 .input {
+                     position: relative;
+                     cursor: pointer;
+                     margin: 15px 0;
+                     .input-header {
+                         display: flex;
+                         align-items: center;
+                         justify-content: space-between;
+                         border: 1px solid #378da9;
+                         padding: 5px;
+                         border-radius: 3px;
+                         span {
+                             font-size: 17px;
+                         }
+                     }
+                     .input-list {
+                         width: 100%;
+                         position: absolute;
+                         transform: translateY(4px);
+                         border: 1px solid #378da9;
+                         border-radius: 3px;
+                         overflow: auto;
+                         height: 169px;
+                         background: #fff;
+                         z-index: 2;
+                         .search-box {
+                             margin: 4px;
+                             input {
+                                 width: 100%;
+                                 padding: 5px;
+                                 border: 1px solid #378da9;
+                                 outline: none;
+                                 border-radius: 3px;
+                             }
+                         }
+                         li {
+                             padding: 4px;
+                             &:hover {
+                                 background: #378da9;
+                                 color: #fff;
+                             }
+                             &:active {
+                                 background: #378da9;
+                                 color: #fff;
+                             }
+                         }
+                     }
+                     .buttons-wrapper {
+                         width: 100%;
+                         display: flex;
+                         border: 1px solid #378da9;
+                         border-radius: 3px;
+                         button {
+                             flex: 1;
+                             border: none;
+                             outline: none;
+                             background: none;
+                             padding: 8px;
+                             cursor: pointer;
+                             &:not(:last-child) {
+                                 border-right: 1px solid #378da9;
+                             }
+                             &.active {
+                                 background: #378da9;
+                                 color: #fff;
+                             }
+                         }
+                     }
+                 }
+             }
+         }
+     }
+     .right-section {
+         width: 77%;
+         height: 100vh;
+         display: flex;
+         flex-direction: column;
+         .right-section-content {
+             width: 100%;
+             display: flex;
+             flex-wrap: wrap;
+             padding: 10px 0;
+             gap: 15px;
+             height: calc(100% - 50px);
+             overflow: hidden;
+             .property-card {
+                 width: calc(33.33% - 10px);
+                 margin: 10px 0;
+             }
+             .empty-container {
+                 width: 100%;
+                 height: 64vh;
+                 position: relative;
+                 background: #f5f5f5;
+                 padding: 0 40px;
+                 display: flex;
+                 align-items: center;
+                 &::before {
+                     position: absolute;
+                     left: 0;
+                     top: 0;
+                     content: '';
+                     background-image: url('../../../images/rentImages/emptyBanner.svg');
+                     background-repeat: no-repeat;
+                     background-size: contain;
+                     background-position: 0% 100%;
+                     width: 100%;
+                     height: 100%;
+                     transform: scaleX(-1);
+                 }
+                 .empty-container-text {
+                     position: relative;
+                     z-index: 10;
+                     width: 55%;
+                     h2 {
+                         margin-bottom: 20px;
+                         color: red;
+                     }
+                     li {
+                         margin: 10px 0;
+                         color: #378da9;
+                     }
+                     button {
+                         margin-top: 20px;
+                         font-size: 25px;
+                         padding: 2px 20px 2px 2px;
+                         background: none;
+                         border: none;
+                         color: #378da9;
+                         cursor: pointer;
+                         border-radius: 3px;
+                         &:hover {
+                             color: #fff;
+                             background: #378da9;
+                         }
+                         &:active {
+                             color: #fff;
+                             background: #378da9;
+                         }
+                     }
+                 }
+             }
+         }
+         .right-section-pagination {
+             height: 50px;
+             border: 1px solid #378da9;
+             border-radius: 4px;
+             padding: 15px;
+             .pagination {
+                 width: 100%;
+                 height: 100%;
+                 display: flex;
+                 font-family: 'Urbanist-Regular';
+                 justify-content: center;
+                 align-items: center;
+                 gap: 15px;
+                 .page-num {
+                     padding: 6px 10px;
+                     border-radius: 30px;
+                     cursor: pointer;
+                     font-size: 14px;
+                 }
+                 .prev,
+                 .next {
+                     cursor: pointer;
+                     text-transform: capitalize;
+                     font-size: 15px;
+                     color: #378da9;
+                     padding: 4px 9px;
+                     border-radius: 4px;
+                     &:hover {
+                         background: #378da9;
+                         color: #fff;
+                     }
+                     &:active {
+                         background: #378da9;
+                         color: #fff;
+                     }
+                 }
+                 .active-num {
+                     padding: 5px 0;
+                     background: #378da9;
+                     color: #fff;
+                     border-radius: 30px;
+                 }
+             }
+         }
+     }
+    }
+    .rent-apartment-content.empty {
+         transition: height 0.3s ease-in-out;
+         height: 67.5vh;
+    }
+ }

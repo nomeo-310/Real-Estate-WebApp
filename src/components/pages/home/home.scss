@@ -134,10 +134,13 @@
                     width: 100%;
                     height: 300px;
                     overflow: hidden;
+                    border-radius: 4px;
+                    margin-bottom: 8px;
                     img {
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
+                        border-radius: 4px;
                     }
                 }
                 .home-feature-card-text {
@@ -158,6 +161,8 @@
                     width: 100%;
                     height: 300px;
                     background: rgb(223, 45, 45);
+                    border-top-left-radius: 8px;
+                    border-top-right-radius: 8px;
                     opacity: 0;
                 }
                 &:hover {
@@ -171,6 +176,10 @@
                         -ms-transform: scale(1.1);
                         -o-transform: scale(1.1);
                         transform: scale(1.1);
+                    }
+                    .home-feature-card-image {
+                        border-bottom-left-radius: 0;
+                        border-bottom-right-radius: 0;
                     }
                     .home-feature-card-text {
                         transform: translateY(0px);
@@ -203,6 +212,7 @@
     .fact-card {
         .fact-card-inner {
             background: linear-gradient(90deg, #40a6c2 10%, #132f4d 90%);
+            border-radius: 8px;
             padding: 20px 0;
             color: #fff;
             .fact-card-inner-content {
@@ -265,7 +275,7 @@
                     height: 300px;
                     .home-feature-card-image {
                         height: 250px;
-                        margin-bottom: 5px;
+                        margin-bottom: 10px;
                     }
                     .mask {
                         height: 250px;
@@ -281,6 +291,7 @@
         }
         .fact-card {
             .fact-card-inner {
+                background: linear-gradient(180deg, #40a6c2 0%, #132f4d 100%);
                 .fact-card-inner-content {
                     padding-bottom: 0;
                     flex-direction: column;

@@ -4,15 +4,11 @@ export const navItems = [
         path: '/rent-an-apartment'
     },
     {
-        name: 'buy an apartment',
-        path: '/buy-an-apartment'
+        name: 'buy properties',
+        path: '/buy-properties'
     },
     {
         name: 'invest in apartments',
         path: '/invest-in-apartments'
-    },
-    {
-        name: 'buy landed properties',
-        path: '/buy-landed-properties'
-    },
+    }
 ];

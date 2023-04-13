@@ -1,0 +1,603 @@
+.rent-apartment {
+   .rent-apartment-content {
+    display: flex;
+    gap: 15px;
+    height: 100vh;
+    overflow: hidden;
+    .left-section {
+        width: 23%;
+        height: 100vh;
+        padding-top: 20px;
+        .left-section-content {
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+            padding: 0 10px ;
+            .section-drop-down-container {
+                .input {
+                    position: relative;
+                    cursor: pointer;
+                    margin: 15px 0;
+                    .input-header {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        border: 1px solid #378da9;
+                        padding: 5px;
+                        border-radius: 3px;
+                        span {
+                            font-size: 17px;
+                        }
+                    }
+                    .input-list {
+                        width: 100%;
+                        position: absolute;
+                        transform: translateY(4px);
+                        border: 1px solid #378da9;
+                        border-radius: 3px;
+                        overflow: auto;
+                        height: 169px;
+                        background: #fff;
+                        z-index: 2;
+                        .search-box {
+                            margin: 4px;
+                            input {
+                                width: 100%;
+                                padding: 5px;
+                                border: 1px solid #378da9;
+                                outline: none;
+                                border-radius: 3px;
+                            }
+                        }
+                        li {
+                            padding: 4px;
+                            &:hover {
+                                background: #378da9;
+                                color: #fff;
+                            }
+                            &:active {
+                                background: #378da9;
+                                color: #fff;
+                            }
+                        }
+                    }
+                    .input-list.category-list {
+                        height: 55px;
+                        overflow: hidden;
+                    }
+                    .buttons-wrapper {
+                        width: 100%;
+                        display: flex;
+                        border: 1px solid #378da9;
+                        border-radius: 3px;
+                        button {
+                            flex: 1;
+                            border: none;
+                            outline: none;
+                            background: none;
+                            padding: 8px;
+                            cursor: pointer;
+                            &:not(:last-child) {
+                                border-right: 1px solid #378da9;
+                            }
+                            &.active {
+                                background: #378da9;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .right-section {
+        width: 77%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        .right-section-content {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px 0;
+            gap: 15px;
+            height: calc(100% - 50px);
+            overflow: hidden;
+            .property-card {
+                width: calc(33.33% - 10px);
+                margin: 10px 0;
+            }
+            .empty-container {
+                width: 100%;
+                height: 64vh;
+                position: relative;
+                background: #f5f5f5;
+                padding: 0 40px;
+                display: flex;
+                align-items: center;
+                &::before {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    content: '';
+                    background-image: url('../../images/rentImages/emptyBanner.svg');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: 0% 100%;
+                    width: 100%;
+                    height: 100%;
+                    transform: scaleX(-1);
+                }
+                .empty-container-text {
+                    position: relative;
+                    z-index: 10;
+                    width: 55%;
+                    h2 {
+                        margin-bottom: 20px;
+                        color: red;
+                    }
+                    li {
+                        margin: 10px 0;
+                        color: #378da9;
+                    }
+                    button {
+                        margin-top: 20px;
+                        font-size: 25px;
+                        padding: 2px 20px 2px 2px;
+                        background: none;
+                        border: none;
+                        color: #378da9;
+                        cursor: pointer;
+                        border-radius: 3px;
+                        &:hover {
+                            color: #fff;
+                            background: #378da9;
+                        }
+                        &:active {
+                            color: #fff;
+                            background: #378da9;
+                        }
+                    }
+                }
+            }
+        }
+        .right-section-pagination {
+            height: 50px;
+            border: 1px solid #378da9;
+            border-radius: 4px;
+            padding: 15px;
+            .pagination {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                font-family: 'Urbanist-Regular';
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+                .page-num {
+                    padding: 6px 10px;
+                    border-radius: 30px;
+                    cursor: pointer;
+                    font-size: 14px;
+                }
+                .prev,
+                .next {
+                    cursor: pointer;
+                    text-transform: capitalize;
+                    font-size: 15px;
+                    color: #378da9;
+                    padding: 4px 9px;
+                    border-radius: 4px;
+                    &:hover {
+                        background: #378da9;
+                        color: #fff;
+                    }
+                    &:active {
+                        background: #378da9;
+                        color: #fff;
+                    }
+                }
+                .active-num {
+                    padding: 5px 0;
+                    background: #378da9;
+                    color: #fff;
+                    border-radius: 30px;
+                }
+            }
+        }
+    }
+   }
+   .rent-apartment-content.empty {
+        transition: height 0.3s ease-in-out;
+        height: 67.5vh;
+   }
+}
+.single-rent-top {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    .single-rent-top-left {
+        width: 65%;
+    }
+    .single-rent-top-right {
+        width: 35%;
+        border-radius: 5px;
+        h3 {
+            margin-bottom: 8px;
+        }
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 8px;
+            li {
+                width: calc(50% - 5px);
+                border-radius: 4px;
+                padding: 4px 8px;
+                background: #eaf9ff;
+                .mdi {
+                    margin-right: 8px;
+                }
+                .squared {
+                    vertical-align: super;
+                    font-size: 12px;
+                }
+            }
+        }
+        .manager-details-box {
+            margin-top: 20px;
+            .manager-details {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .manager-pix {
+                    width: 30%;
+                    padding: 15px;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .manager-contacts {
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
+.single-rent-bottom {
+    .apartment-desc-et-input {
+        display: flex;
+        gap: 30px;
+        .apartment-desc {
+            width: 75%;
+            .mdi {
+                margin-left: 5px;
+            }
+        }
+        .apartment-input-form {
+            width: 25%;
+            .apartment-input-form-content {
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                padding: 15px;
+                .apartment-input-price {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    div {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        h2 {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                .apartment-input-tab {
+                    .input-tab-nav {
+                        width: 100%;
+                        display: flex;
+                        border: 1px solid #378da9;
+                        border-radius: 4px;
+                        button {
+                            flex: 1;
+                            border: none;
+                            padding: 6px;
+                            background: none;
+                            cursor: pointer;
+                            &:first-child {
+                                border-right: 1px solid #378da9;
+                            }
+                            &.selected {
+                                background-color: #378da9;
+                                color: #fff;
+                            }
+                        }
+                    }
+                    .schedule {
+                        .input {
+                            position: relative;
+                            cursor: pointer;
+                            .input-header {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                border: 1px solid #ccc;
+                                padding: 6px;
+                                border-radius: 4px;
+                                margin-bottom: 10px;
+                                h2 {
+                                    margin-bottom: 0;
+                                }
+                            }
+                            .input-list {
+                                position: absolute;
+                                transform: translateY(-4px);
+                                border: 1px solid #ccc;
+                                background: #fff;
+                                z-index: 2;
+                                width: 100%;
+                                border-radius: 4px;
+                                li {
+                                    padding: 3px 5px;
+                                    &:hover {
+                                        background: #378da9;
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                            .react-calendar {
+                                border: 1px solid #ccc;
+                                padding: 5px;
+                                border-radius: 4px;
+                                position: absolute;
+                                transform: translateY(-4px);
+                                z-index: 2;
+                                width: 100%;
+                            }
+                            .react-calendar,
+                            .react-calendar *,
+                            .react-calendar *:before,
+                            .react-calendar *:after {
+                                font-family: 'Urbanist-Regular';
+                            }
+                            .react-calendar button {
+                                border-radius: 4px;
+                            }
+                           .react-calendar__tile--active {
+                                background: #378da9;
+                                color: white;
+                            }
+                        }
+                        .submit-button {
+                            button {
+                                width: 100%;
+                                padding: 8px;
+                                border: none;
+                                outline: none;
+                                background-color: #378da9;
+                                color: #fff;
+                                border-radius: 4px;
+                                cursor: pointer;
+                                a {
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    .rent-apartment {
+        .container {
+            width: 95%;
+            .rent-apartment-content {
+                width: 100%;
+                flex-direction: column;
+                gap: 15px;
+                height: 100%;
+                margin: 30px 0;
+             .left-section {
+                width: 100%;
+                height: 38vh;
+                .section-drop-down-container {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 15px;
+                    .input {
+                        width: calc(50% - 7.5px);
+                        margin: 0 !important;
+                        position: relative;
+                        cursor: pointer;
+                        .input-header {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            border: 1px solid #378da9;
+                            padding: 5px;
+                            border-radius: 3px;
+                            span {
+                                font-size: 17px;
+                            }
+                        }
+                        .input-list {
+                            width: 100%;
+                            position: absolute;
+                            transform: translateY(4px);
+                            border: 1px solid #378da9;
+                            border-radius: 3px;
+                            overflow: auto;
+                            height: 169px;
+                            background: #fff;
+                            z-index: 2;
+                            .search-box {
+                                margin: 4px;
+                                input {
+                                    width: 100%;
+                                    padding: 5px;
+                                    border: 1px solid #378da9;
+                                    outline: none;
+                                    border-radius: 3px;
+                                }
+                            }
+                            li {
+                                padding: 4px;
+                                &:hover {
+                                    background: #378da9;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                        .buttons-wrapper {
+                            width: 100%;
+                            display: flex;
+                            border: 1px solid #378da9;
+                            border-radius: 3px;
+                            button {
+                                flex: 1;
+                                border: none;
+                                outline: none;
+                                background: none;
+                                padding: 8px;
+                                cursor: pointer;
+                                &:not(:last-child) {
+                                    border-right: 1px solid #378da9;
+                                }
+                                &.active {
+                                    background: #378da9;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+             }
+             .right-section {
+                 width: 100%;
+                 height: calc(100vh + 310px);
+                 .right-section-content {
+                     width: 100%;
+                     display: flex;
+                     flex-wrap: wrap;
+                     padding: 0;
+                     gap: 15px;
+                     .property-card {
+                         width: calc(50% - 7.5px);
+                         margin: 10px 0;
+                     }
+                     .empty-container {
+                        padding: 0;
+                        padding-left: 30px;
+                        .empty-container-text {
+                            width: 65%;
+                            li {
+                                color: #000;
+                                font-size: 14px;
+                            }
+                            button {
+                                margin-top: 15px;
+                                font-size: 20px;
+                                padding: 4px 20px 4px 4px;
+                            }
+                        }
+                    }
+                 }
+             }
+            }
+            .rent-apartment-content.empty {
+                transition: height 0.3s ease-in-out;
+                height: 105vh;
+                margin: 0;
+           }
+        }
+    }
+    .single-rent-top {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 20px;
+        .single-rent-top-left {
+            width: 100%;
+        }
+        .single-rent-top-right {
+            width: 100%;
+        }
+    }
+    .single-rent-bottom {
+        .apartment-desc-et-input {
+            flex-direction: column;
+            gap: 20px;
+            .apartment-desc {
+                width: 100%;
+            }
+            .apartment-input-form {
+                width: 100%;
+                .apartment-input-form-content {
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    padding: 15px;
+                    .apartment-input-price {
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-direction: row;
+                        gap: 10px;
+                        div {
+                            width: 60%;
+                            h2 {
+                                margin-bottom: 0;
+                            }
+                            &:last-child {
+                                text-align: right;
+                            }
+                        }
+                    }
+                    .apartment-input-tab {
+                        .input-tab-nav {
+                            width: 100%;
+                            display: flex;
+                            border: 1px solid #378da9;
+                            border-radius: 4px;
+                            button {
+                                flex: 1;
+                                border: none;
+                                padding: 6px;
+                                background: none;
+                                cursor: pointer;
+                                &:first-child {
+                                    border-right: 1px solid #378da9;
+                                }
+                                &.selected {
+                                    background-color: #378da9;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                        .schedule {
+                            .input {
+                                position: relative;
+                                cursor: pointer;
+                                .input-header {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    border: 1px solid #ccc;
+                                    padding: 6px;
+                                    border-radius: 4px;
+                                    margin-bottom: 10px;
+                                    h2 {
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

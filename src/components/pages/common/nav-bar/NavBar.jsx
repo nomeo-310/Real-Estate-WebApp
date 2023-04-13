@@ -5,11 +5,31 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import { navItems } from './navBarData';
-
+import { useLocation } from 'react-router-dom';
 
 const NavBar = () => {
   const [navBar, setNavBar] = useState('nav-bar');
   const [userBar, setUserBar] = useState('activities-logout-list');
+  const [color, setColor] = useState('')
+  const [showNav, setShowNav] = useState('')
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === '/' || location.pathname === '/subscription-form') {
+      setColor('black')
+    } else {
+      setColor('white')
+    }
+  }, [location]);
+
+  useEffect(() => {
+    if (location.pathname === '/subscription-form' || location.pathname === '/frequently-asked-questions') {
+      setShowNav('none')
+    } else {
+      setShowNav('')
+    }
+  }, [location]);
 
   const navbarFixed =()=> {
     if (window.scrollY >= 200) {
@@ -64,7 +84,7 @@ const NavBar = () => {
   }
 
   return (
-    <div className={navBar}>
+    <div className={navBar} style={{color: color, display: showNav}}>
       <div className="nav-bar-wrapper">
         <div className="nav-bar-left">
           <div className="brand-name">

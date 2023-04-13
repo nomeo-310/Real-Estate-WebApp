@@ -1,0 +1,86 @@
+.main-footer {
+    background: linear-gradient(90deg, #40a6c2 10%, #132f4d 90%);
+    color: #fff;
+    a {
+        color: inherit;
+    }
+    .container {
+        display: flex;
+        .main-footer-left {
+            width: 20%;
+            .footer-social-icons {
+                margin-top: 7px;
+                display: flex;
+                gap: 10px;
+            }
+        }
+        .main-footer-right {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            .main-footer-right-top {
+                display: flex;
+                text-align: center;
+                div {
+                    width: 25%;
+                    &:not(:last-child) {
+                        border-right: 1px solid #fff;
+                    }
+                    li {
+                        &:not(:last-child) {
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    .main-footer {
+        background: linear-gradient(90deg, #40a6c2 10%, #132f4d 90%);
+        color: #fff;
+        a {
+            color: inherit;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            .main-footer-left {
+                width: 100%;
+                .footer-social-icons {
+                    margin-top: 7px;
+                    gap: 10px;
+                }
+            }
+            .main-footer-right {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                .main-footer-right-top {
+                    text-align: left;
+                    flex-wrap: wrap;
+                    div {
+                        width: 50%;
+                        padding: 10px 20px 10px 0;
+                        &:not(:last-child) {
+                            border-right: none;
+                        }
+                        li {
+                            &:not(:last-child) {
+                                margin-bottom: 4px;
+                            }
+                        }
+                        h2 {
+                            border-bottom: 1px solid #fff;
+                            padding-bottom: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}

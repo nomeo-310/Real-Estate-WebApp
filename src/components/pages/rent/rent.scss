@@ -7,7 +7,7 @@
         .merit {
             flex: 1;
             height: 140px;
-            border: 1px solid red;
+            border: 1px solid #378da9;
             padding: 10px;
             border-radius: 5px;
             display: flex;
@@ -15,30 +15,298 @@
             justify-content: space-between;
             h2 {
                 margin-bottom: 0;
+                color: #378da9;
             }
         }
     }
+    .rent-subscription {
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(90deg, #40a6c2 10%, #132f4d 90%);
+        color: #fff;
+        padding: 40px;
+        border-radius: 8px;
+        .rent-subscription-content {
+            display: flex;
+            gap: 30px;
+            .rent-subscription-left {
+                width: 40%;
+            }
+            .rent-subscription-right {
+                width: 60%;
+                .rent-subscription-steps {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                    .rent-subscription-step {
+                        width: calc(50% - 10px);
+                        border: 1px solid #fff;
+                        border-radius: 8px;
+                        padding: 10px;
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 10px;
+                        .icon {
+                            margin-top: -10px;
+                            span {
+                                font-size: 35px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .rent-subscription-link {
+            background: #fff;
+            color: #40a6c2;
+            width: calc(40% - 100px);
+            margin-top: -55px;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a {
+                text-align: center;
+                display: block;
+                color: inherit;
+            }
+
+        }
+    }
    }
+   .explore-apartment {
+    width: 100%;
+    .explore-apartment-links {
+        display: flex;
+        gap: 10px;
+        height: 440px;
+        .section {
+            position: relative;
+            overflow: hidden;
+            .explore-apartment-text {
+                position: absolute;
+                left: 10px;
+                bottom: 10px;
+                z-index: 2;
+            }
+            a {
+                width: 100%;
+                height: 100%;
+                padding: 0;
+                color: white;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    margin: 0;
+                }
+                .overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.3);
+                    z-index: 1;
+                }
+            }
+        }
+        .explore-apartment-left {
+            width:50%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .explore-apartment-right {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .explore-apartment-right-top {
+                width: 100%;
+                height: 50%;
+                display: flex;
+                gap: 10px;
+                .explore-apartment-right-top-left {
+                    width: 50%;
+                    height: 100%;
+                }
+                .explore-apartment-right-top-right {
+                    width: 50%;
+                    height: 100%;
+                }
+            }
+            .explore-apartment-right-bottom {
+                width: 100%;
+                height: 50%;
+            }
+        }
+    }
+    }
+    .rent-locations {
+        .tab-nav {
+            display: flex;
+            .location-nav-item {
+                border: none;
+                background: none;
+                cursor: pointer;
+                padding: 3px 10px;
+                &.selected {
+                    color: #fff;
+                    border: 1px solid #378da9;
+                    background: #378da9;
+                }
+            }
+        }
+        .tab-content {
+            .tab-list {
+                display: inline-flex;
+                flex-wrap: wrap;
+                align-items: first baseline;
+                .tab-item {
+                    width: fit-content;
+                    padding: 4px;
+                    border: 1px solid #ccc;
+                    margin-bottom: 5px;
+                    margin-right: 5px;
+                    cursor: pointer;
+                    .location-details {
+                        height: 0px;
+                        overflow: hidden;
+                        transition: height all 0.3s ease;
+                        &.open {
+                            height: 100%;
+                        }
+                    }
+                    &.active {
+                        background: #eaf9ff;
+                        h2 {
+                            color: #378da9;
+                            padding: 2px 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .rent-fun-fact-content {
+        padding: 50px;
+        background: #eaf9ff;
+        .rent-fact-list {
+            display: flex;
+            color: #378da9;
+            .rent-fact-item:not(:last-child) {
+                width: 32.5%;
+                border-right: 1px solid #378da9;
+                span {
+                    display: none;
+                }
+            }
+            .rent-fact-item:last-child {
+                width: 35%;
+            }
+        }
+    }
 }
 @media (max-width: 600px) {
     .rent {
         .rent-introduction {
-         .merits {
-             display: flex;
-             flex-wrap: wrap;
-             gap: 15px;
-             .merit {
-                flex: none;
-                 width: calc(50% - 7.5px);
-                 height: 160px;
-                 border: 1px solid red;
-                 padding: 10px;
-                 border-radius: 5px;
-                 display: flex;
-                 flex-direction: column;
-                 justify-content: space-between;
-             }
-         }
+            .merits {
+                .merit {
+                    flex: none;
+                    width: calc(50% - 7.5px);
+                    height: 160px;
+                }
+            }
+            .rent-subscription {
+                background: linear-gradient(180deg, #40a6c2 10%, #132f4d 90%);
+                padding: 20px;
+                gap: 30px;
+                .rent-subscription-content {
+                    flex-direction: column;
+                    gap: 20px;
+                    .rent-subscription-left {
+                        width: 100%;
+                    }
+                    .rent-subscription-right {
+                        width: 100%;
+                        .rent-subscription-steps {
+                            width: 100%;
+                            gap: 10px;
+                            .rent-subscription-step {
+                                width: 100%;
+                                .icon {
+                                    span {
+                                        font-size: 30px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .rent-subscription-link {
+                    width: 100%;
+                    margin-top: 0;
+        
+                }
+            }
         }
-     } 
+        .explore-apartment {
+            .explore-apartment-links {
+                flex-direction: column;
+                height: 100%;
+                .explore-apartment-left {
+                    width:100%;
+                    height: 180px;
+                }
+                .explore-apartment-right {
+                    width: 100%;
+                    .explore-apartment-right-top {
+                        .explore-apartment-right-top-left {
+                            width: 50%;
+                            height: 180px;
+                        }
+                        .explore-apartment-right-top-right {
+                            width: 50%;
+                            height: 180px;
+                        }
+                    }
+                    .explore-apartment-right-bottom {
+                        width: 100%;
+                        height: 180px;
+                    }
+                }
+            }
+        }
+        .rent-fun-fact-content {
+            padding: 40px;
+            margin: 0;
+            h3 {
+                width: 100%;
+            }
+            .rent-fact {
+                margin-top: 30px;
+                .rent-fact-list {
+                    flex-direction: column;
+                    .rent-fact-item {
+                        width: 70%;
+                        margin: 0 auto;
+                        border-right: none;
+                    }
+                    .rent-fact-item:last-child {
+                        border-bottom: none;
+                    }
+                    .rent-fact-item:nth-child(2) {
+                        margin: 10px auto;
+                        padding: 10px 0;
+                        border-top: 1px solid #378da9;
+                        border-bottom: 1px solid #378da9;
+                    }
+                }  
+            }
+
+        }
+
+    } 
 }

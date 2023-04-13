@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { funFactData } from './homeData';
 
 const FactCard = () => {
@@ -17,9 +16,6 @@ const FactCard = () => {
                     ))}
                 </ul>
             </div>
-        </div>
-        <div className="faq-link margin-y-md text-center">
-            <Link to='/frequently-asked-questions' className='button-default normal-text normal-md'>See FAQ</Link>
         </div>
     </div>
   );

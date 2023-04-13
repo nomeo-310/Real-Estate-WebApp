@@ -4,6 +4,7 @@ import HomeHeader from './HomeHeader'
 import HomeFeature from './HomeFeature'
 import FeatureProperties from './FeatureProperties'
 import FactCard from './FactCard'
+import FaqLink from '../common/FaqLink'
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <HomeFeature/>
       <FeatureProperties/>
       <FactCard/>
+      <FaqLink/>
     </div>
   )
 }

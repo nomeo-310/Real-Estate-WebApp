@@ -4,14 +4,14 @@ import './styles.scss'
 
 const BuyCard = ({buyCardData: {id, image, address, down_payment, apartment_status, status, annual_rent, city, bed_no, bath_no, toilet_no, apartment_area}, small}) => {
   return (
-    <div className='property-card'>
+    <div className={small ? `property-card small` : `property-card`}>
         <div className="property-card-top">
             <div className="property-card-image">
                 <img src={image} alt={`property-${id}`}/>
             </div>
             <div className="property-card-bottom">
                 <div className="property-address">
-                    <h2 className="normal-text normal-sm">Location:</h2><h2 className="normal-text normal-sm">{address}, {city}</h2>
+                    <h2 className="normal-text normal-sm">{address}, {city}</h2>
                 </div>
                 <div className="property-price">
                     <h2 className="normal-text normal-sm">Down Payment:</h2>
@@ -38,21 +38,21 @@ const BuyCard = ({buyCardData: {id, image, address, down_payment, apartment_stat
                         <h2 className="normal-text normal-sm">{annual_rent.toLocaleString()}/<span className='normal-text normal-tiny'>year</span></h2>
                     </div>
                     {small ? 
-                        <Link to={`/buy-an-apartment/property/${id}`}><span className="mdi mdi-information"></span></Link>
+                        <Link to={`/buy-properties/property/${id}`}><span className="mdi mdi-information"></span></Link>
                         :
-                        <Link to={`/buy-an-apartment/property/${id}`}><span className='button-tiny normal-text normal-tiniest button-round'>Read More</span></Link>
+                        <Link to={`/buy-properties/property/${id}`}><span className='button-tiny normal-text normal-tiniest button-tiny-curved'>Read More</span></Link>
                     }
                 </div>
             </div>
             <div className="apartment-details">
-                <div className="bed">
-                    <span className="mdi mdi-bed normal-lg"></span> <h2 className="normal-text normal-tiny">{bed_no} Bedrooms</h2>
+            <div className="bed">
+                    <span className="mdi mdi-bed normal-lg"></span> <h2 className="normal-text normal-tiny">{bed_no === 1 ? `${bed_no} Bedroom` : `${bed_no} Bedrooms`}</h2>
                 </div>
                 <div className="bath">
-                    <span className="mdi mdi-bathtub normal-lg"></span> <h2 className="normal-text normal-tiny">{bath_no} Bathrooms</h2>
+                    <span className="mdi mdi-bathtub normal-lg"></span> <h2 className="normal-text normal-tiny">{bath_no === 1 ? `${bath_no} Bathroom` : `${bath_no} Bathrooms`}</h2>
                 </div>
                 <div className="toilet">
-                    <span className="mdi mdi-toilet normal-lg"></span> <h2 className="normal-text normal-tiny">{toilet_no} Toilets</h2>
+                    <span className="mdi mdi-toilet normal-lg"></span> <h2 className="normal-text normal-tiny">{toilet_no === 1 ? `${toilet_no} Toilet` : `${toilet_no} Toilets`}</h2>
                 </div>
                 <div className="area">
                    <span className="mdi normal-lg mdi-land-plots"></span> <h2 className="normal-text normal-tiny">{apartment_area} m<span>2</span></h2> 
